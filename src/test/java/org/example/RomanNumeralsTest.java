@@ -26,4 +26,9 @@ public class RomanNumeralsTest {
     public void testForNonRomanNumerals() {
         int number = RomanNumerals.parse("XIIA");
     }
+    
+    @Test(expected = IllegalArgumentException.class)
+    public void testForNegativeNumbers() {
+        int number = RomanNumerals.parse("-XXI");
+    }
 }
